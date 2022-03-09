@@ -7,8 +7,8 @@ import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
 import CircularProgress from "@mui/material/CircularProgress";
-import { END_POINT } from "utils/serverURL";
-import axios from "axios";
+// import { END_POINT } from "utils/serverURL";
+// import axios from "axios";
 
 function CircularProgressWithLabel(props) {
   return (
