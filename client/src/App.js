@@ -17,6 +17,7 @@ const App = () => {
             <Route path='new-prescription' element={<NewPrescription />} />
             <Route path='patient-list' element={<PatientList />} />
             <Route path='' element={<DashBoard />} />
+          <Route path='prescription' element={<Prescription />} />
           </Route>
           <Route path='prescription' element={<Prescription />} />
         </Routes>
