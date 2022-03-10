@@ -6,21 +6,17 @@ import Doctor from "Pages/Doctor";
 import NewPrescription from "Pages/Doctor/NewPrescription";
 import Prescription from "Pages/Prescription";
 import DashBoardDoctor from "Pages/Doctor/DashBoardDoctor";
-import DashBoardChemist from "Pages/Chemist/DashBoardChemist";
 import PatientList from "Pages/Doctor/PatientList";
 import Chemist from "Pages/Chemist";
 import QrCodeScanner from "Pages/Chemist/QrCodeScanner";
 import UpdatePrescription from "Pages/Chemist/UpdatePrescription";
-<<<<<<< HEAD
 import Manufacture from "Pages/Manufacture";
 import ShipPackage from "Pages/Manufacture/ShipPackage";
 import ReceivePackage from "Pages/Manufacture/ReceivePackage";
 import Admin from "Pages/Admin"
 import AdminDashboard from "Pages/Admin/Dashboard"
-=======
-import PrescriptionList from "Pages/Chemist/PrescriptionList"
-import Scanner from "Pages/Chemist/Scanner"
->>>>>>> 047facc00532920311eb20291d11e1a6a788b916
+import ChemistProfile from "Pages/Chemist/Profile";
+import ChemistPrescriptionList from "Pages/Chemist/PrescriptionList";
 
 const App = () => {
   return (
@@ -36,8 +32,10 @@ const App = () => {
           </Route>
 
           <Route path="/chemist" element={<Chemist />}>
+            <Route path="" element={<ChemistProfile />} />
             <Route path="scan-qrcode" element={<QrCodeScanner />} />
             <Route path="update-prescription" element={<UpdatePrescription />} />
+            <Route path="prescription-list" element={<ChemistPrescriptionList />} />
           </Route>
 
           {/* // TODO: Alot of work pending */}
@@ -48,7 +46,6 @@ const App = () => {
 
           <Route path="/admin" element={<Admin />} >
             <Route path="" element={<AdminDashboard />} />
-
           </Route>
 
           <Route path="prescription" element={<Prescription />} />

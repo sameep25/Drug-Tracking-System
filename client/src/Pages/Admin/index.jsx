@@ -28,10 +28,17 @@ const drawerItems = [
  
 ];
 
+const account = {
+  displayName: 'Sameep Vishwakarma',
+  email: 'contact@sameepvishwakarma.com',
+  photoURL: 'https://m.media-amazon.com/images/I/41hmyB0fe2L._UXNaN_FMjpg_QL85_.jpg',
+  role:"NCB Ki Raid"
+};
+
 const App = () => {
   return (
     <>
-      <Dashboard sidebarConfig={drawerItems}>
+      <Dashboard sidebarConfig={drawerItems} account={account}>
         <Outlet />
       </Dashboard>
     </>
