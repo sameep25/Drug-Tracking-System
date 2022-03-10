@@ -4,17 +4,17 @@ import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import Typography from "@mui/material/Typography";
 import Grid from "@mui/material/Grid";
-import { Container ,CardActionArea } from "@mui/material";
+import { Container, CardActionArea } from "@mui/material";
 
 import { styled } from "@mui/material";
 
 // pages
 import Profile from "./Profile";
-import Cards from "./Cards";
+import InformationBar from "Pages/Doctor/InformationBar";
 
 const DivStyle = styled("div")({
-  margin:"24px",
-})
+  margin: "24px",
+});
 
 const NewPrescription = () => {
   return (
@@ -26,14 +26,9 @@ const NewPrescription = () => {
           </Grid>
 
           <Grid item xs={3}>
-            Information
+            <InformationBar />
           </Grid>
         </Grid>
-
-        <Box>Select the </Box>
-
-        <Cards />
-
       </DivStyle>
     </>
   );

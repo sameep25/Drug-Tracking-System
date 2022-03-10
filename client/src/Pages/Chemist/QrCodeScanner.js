@@ -1,24 +1,36 @@
-import { React, useState } from "react";
-import { QrReader } from "react-qr-reader";
+import * as React from "react";
+import { Button ,styled ,Box } from "@mui/material";
+import Dialog from "@mui/material/Dialog";
+import DialogContent from "@mui/material/DialogContent";
+
+// pages
+import Scanner from "Pages/Chemist/Scanner";
+
 
 const QrCodeScanner = () => {
-  const [data, setData] = useState("");
-  return (
-    <>
-      <QrReader
-        onResult={(result, error) => {
-          if (!!result) {
-            setData(result?.text);
-          }
+  const [open, setOpen] = React.useState(false);
 
-          if (!!error) {
-            console.info(error);
-          }
-        }}
-        style={{ width: "100%" }}
-      />
-      <p>{data}</p>
-    </>
+  const handleClickOpen = () => {
+    setOpen(true);
+  };
+
+  const handleClose = () => {
+    setOpen(false);
+  };
+
+  return (
+    <div>
+      <div>
+        <Button onClick={handleClickOpen}>Scan Qr-Code</Button>
+        <Dialog open={open} onClose={handleClose}>
+          <DialogContent>
+            <Box sx={{width:"400px" ,height:"400px"}}>
+              <Scanner />
+            </Box>
+          </DialogContent>
+        </Dialog>
+      </div>
+    </div>
   );
 };
 

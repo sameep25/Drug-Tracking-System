@@ -12,17 +12,16 @@ const Header = styled("Box")({
 
 const ProfileBox = styled("Box")({
   display: "flex",
-  alignItems:"center" ,
+  alignItems: "center",
   marginLeft: "4vh",
   marginRight: "4vh ",
-  padding:8,
+  padding: 8,
   borderBottom: "1px #919191 solid",
-  "& > *":{
-      marginRight:"4vh",
-      color:"#919191",
-  }
+  "& > *": {
+    marginRight: "4vh",
+    color: "#919191",
+  },
 });
-
 
 const doctor = [
   { name: "Sameep Vishwakarma", contact: "1234567890", id: "0987654321" },

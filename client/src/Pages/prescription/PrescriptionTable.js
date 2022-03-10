@@ -7,11 +7,10 @@ import TableRow from "@mui/material/TableRow";
 import { styled } from "@mui/system";
 
 const prescriptionDataTable = [
-  { name: "drug1", potency: "200mg", consumption: "once a day" ,duration: "30days" },
-  { name: "drug2", potency: "20mg", consumption: "thrice a day(after meal)",duration: "30days" },
-  { name: "drug3", potency: "200mg", consumption: "once a day",duration: "30days" },
-  { name: "drug4", potency: "200mg", consumption: "once a day",duration: "30days" },
-  
+  { name: "drug1", potency: "200mg", consumption: "once a day" ,duration: "30days",note: "note1" },
+  { name: "drug2", potency: "20mg", consumption: "thrice a day(after meal)",duration: "30days",note: "note1" },
+  { name: "drug3", potency: "200mg", consumption: "once a day",duration: "30days",note: "note1" },
+  { name: "drug4", potency: "200mg", consumption: "once a day",duration: "30days",note: "note1" },
 ];
 
 const TableBox = styled("div")({
@@ -33,6 +32,7 @@ const PrescriptionTable = () => {
               <TableCell>Potency</TableCell>
               <TableCell>Consumption</TableCell>
               <TableCell>Duration</TableCell>
+              <TableCell>Note</TableCell>
             </TableRow>
           </TableHead>
           <TableBody>
@@ -43,6 +43,7 @@ const PrescriptionTable = () => {
                 <TableCell>{data.potency}</TableCell>
                 <TableCell>{data.consumption}</TableCell>
                 <TableCell>{data.duration}</TableCell>
+                <TableCell>{data.note}</TableCell>
               </TableRow>
             ))}
           </TableBody>
