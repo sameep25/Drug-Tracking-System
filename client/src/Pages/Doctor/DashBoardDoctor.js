@@ -1,11 +1,5 @@
 import React from "react";
-import Box from "@mui/material/Box";
-import Card from "@mui/material/Card";
-import CardContent from "@mui/material/CardContent";
-import Typography from "@mui/material/Typography";
 import Grid from "@mui/material/Grid";
-import { Container, CardActionArea } from "@mui/material";
-
 import { styled } from "@mui/material";
 
 // pages
@@ -16,7 +10,7 @@ const DivStyle = styled("div")({
   margin: "24px",
 });
 
-const NewPrescription = () => {
+const DashBoardDoctor = () => {
   return (
     <>
       <DivStyle>
@@ -34,4 +28,4 @@ const NewPrescription = () => {
   );
 };
 
-export default NewPrescription;
+export default DashBoardDoctor;

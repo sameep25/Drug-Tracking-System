@@ -5,16 +5,22 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Doctor from "Pages/Doctor";
 import NewPrescription from "Pages/Doctor/NewPrescription";
 import Prescription from "Pages/Prescription";
-import DashBoard from "Pages/Doctor/DashBoard";
+import DashBoardDoctor from "Pages/Doctor/DashBoardDoctor";
+import DashBoardChemist from "Pages/Chemist/DashBoardChemist";
 import PatientList from "Pages/Doctor/PatientList";
 import Chemist from "Pages/Chemist";
 import QrCodeScanner from "Pages/Chemist/QrCodeScanner";
 import UpdatePrescription from "Pages/Chemist/UpdatePrescription";
+<<<<<<< HEAD
 import Manufacture from "Pages/Manufacture";
 import ShipPackage from "Pages/Manufacture/ShipPackage";
 import ReceivePackage from "Pages/Manufacture/ReceivePackage";
 import Admin from "Pages/Admin"
 import AdminDashboard from "Pages/Admin/Dashboard"
+=======
+import PrescriptionList from "Pages/Chemist/PrescriptionList"
+import Scanner from "Pages/Chemist/Scanner"
+>>>>>>> 047facc00532920311eb20291d11e1a6a788b916
 
 const App = () => {
   return (
@@ -25,7 +31,7 @@ const App = () => {
           <Route path="/doctor" element={<Doctor />}>
             <Route path="new-prescription" element={<NewPrescription />} />
             <Route path="patient-list" element={<PatientList />} />
-            <Route path="" element={<DashBoard />} />
+            <Route path="" element={<DashBoardDoctor />} />
             <Route path="prescription" element={<Prescription />} />
           </Route>
 

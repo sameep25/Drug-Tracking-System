@@ -20,7 +20,6 @@ const QrCodeScanner = () => {
 
   return (
     <div>
-      <div>
         <Button onClick={handleClickOpen}>Scan Qr-Code</Button>
         <Dialog open={open} onClose={handleClose}>
           <DialogContent>
@@ -29,7 +28,6 @@ const QrCodeScanner = () => {
             </Box>
           </DialogContent>
         </Dialog>
-      </div>
     </div>
   );
 };
