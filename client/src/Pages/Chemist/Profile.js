@@ -3,6 +3,8 @@ import React from "react";
 import { Box, Button, Typography } from "@mui/material";
 import { styled } from "@mui/material";
 
+import QrCodeScanner from "Pages/Chemist/QrCodeScanner";
+
 const Header = styled("Box")({
   display: "flex",
   marginLeft: "4vh",
@@ -23,12 +25,12 @@ const ProfileBox = styled("Box")({
   },
 });
 
-const doctor = [
-  { name: "Sameep Vishwakarma", contact: "1234567890", id: "0987654321" },
+const chemist = [
+  { name: "Vasu Tiwari", contact: "0987654321", id: "1234567890" },
 ];
 
 const imgUrl =
-  "https://www.fortischennai.com/frontend/docimage/M-dtr-1554189149.png";
+  "https://m.media-amazon.com/images/I/41hmyB0fe2L._UXNaN_FMjpg_QL85_.jpg";
 
 const Profile = () => {
   return (
@@ -36,10 +38,15 @@ const Profile = () => {
       <Header>
         <Box>
           <Typography sx={{ color: "#919191" }}>Welcome</Typography>
-          <Typography sx={{ color: "#5081bc" }}>Dr.{doctor[0].name}</Typography>
+          <Typography sx={{ color: "#5081bc" }}>
+            Mr.{chemist[0].name}
+          </Typography>
         </Box>
+        <Box sx={{ display: "flex", alignItems: "center", marginLeft: "auto" }}>
+          <QrCodeScanner />
 
-        <Button sx={{ marginLeft: "auto" }}>LogOut</Button>
+          <Button sx={{ marginLeft: "auto" }}>LogOut</Button>
+        </Box>
       </Header>
 
       <ProfileBox>
@@ -47,13 +54,13 @@ const Profile = () => {
           <img
             style={{ width: "90px", borderRadius: "50%" }}
             src={imgUrl}
-            alt="doctordp"
+            alt="chemistdp"
           />
         </Box>
         <Box>
-          <Typography>Dr. {doctor[0].name}</Typography>
-          <Typography>Contact - {doctor[0].contact}</Typography>
-          <Typography>Doctor Id - {doctor[0].id}</Typography>
+          <Typography>Mr. {chemist[0].name}</Typography>
+          <Typography>Contact - {chemist[0].contact}</Typography>
+          <Typography>Chemist Id - {chemist[0].id}</Typography>
         </Box>
       </ProfileBox>
     </>

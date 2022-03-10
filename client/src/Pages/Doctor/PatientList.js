@@ -9,7 +9,7 @@ import TableContainer from "@mui/material/TableContainer";
 import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
 import Paper from "@mui/material/Paper";
-import { styled } from "@mui/material";
+import { styled, Typography } from "@mui/material";
 import { MdKeyboardArrowDown, MdKeyboardArrowUp } from "react-icons/md";
 
 import PrescriptionDialog from "Component/DashboardLayout/PrescriptionDialog";
@@ -87,10 +87,11 @@ const patientListData = [
 ];
 
 const StyledDiv = styled("div")({
- marginLeft:"2vh" ,
- padding:"4vh" ,
- marginRight:"2vh" ,
-})
+  marginLeft: "2vh",
+  padding: "4vh",
+  marginRight: "2vh",
+  borderTop: "1px solid #919191",
+});
 
 function Row(props) {
   const { patient, index } = props;
@@ -150,27 +151,32 @@ function Row(props) {
 
 export default function CollapsibleTable() {
   return (
-    <StyledDiv>
-      <TableContainer component={Paper}>
-        <Table aria-label="collapsible table" size="small">
-          <TableHead>
-            <TableRow>
-              <TableCell>S.No</TableCell>
-              <TableCell>Name</TableCell>
-              <TableCell>Contact</TableCell>
-              <TableCell>Id</TableCell>
-              <TableCell>Age</TableCell>
-              <TableCell>Gender</TableCell>
-              <TableCell>Prescription</TableCell>
-            </TableRow>
-          </TableHead>
-          <TableBody>
-            {patientListData.map((patient, i) => {
-              return <Row patient={patient} index={i} key={i} />;
-            })}
-          </TableBody>
-        </Table>
-      </TableContainer>
-    </StyledDiv>
+    <>
+      <Typography variant="h4" sx={{ color: "#5081bc", marginLeft: "10px" }}>
+        Patient List
+      </Typography>
+      <StyledDiv>
+        <TableContainer>
+          <Table aria-label="collapsible table" size="medium">
+            <TableHead>
+              <TableRow>
+                <TableCell>S.No</TableCell>
+                <TableCell>Name</TableCell>
+                <TableCell>Contact</TableCell>
+                <TableCell>Id</TableCell>
+                <TableCell>Age</TableCell>
+                <TableCell>Gender</TableCell>
+                <TableCell>Prescription</TableCell>
+              </TableRow>
+            </TableHead>
+            <TableBody>
+              {patientListData.map((patient, i) => {
+                return <Row patient={patient} index={i} key={i} />;
+              })}
+            </TableBody>
+          </Table>
+        </TableContainer>
+      </StyledDiv>
+    </>
   );
 }

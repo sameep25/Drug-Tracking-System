@@ -24,15 +24,15 @@ const AccountStyle = styled('div')(({ theme }) => ({
   backgroundColor: theme.palette.grey[200]
 }));
 
-const account = {
-  displayName: 'Sameep Vishwakarma',
-  email: 'contact@sameepvishwakarma.com',
-  photoURL: 'https://m.media-amazon.com/images/I/41hmyB0fe2L._UXNaN_FMjpg_QL85_.jpg',
-  role:"Neurologist"
-};
+// const account = {
+//   displayName: 'Sameep Vishwakarma',
+//   email: 'contact@sameepvishwakarma.com',
+//   photoURL: 'https://m.media-amazon.com/images/I/41hmyB0fe2L._UXNaN_FMjpg_QL85_.jpg',
+//   role:"Neurologist"
+// };
 
 function DashboardLayout(props) {
-  const { window, children, sidebarConfig } = props;
+  const { window, children, sidebarConfig ,account} = props;
   console.log(props);
   const [mobileOpen, setMobileOpen] = React.useState(false);
 
@@ -96,6 +96,7 @@ function DashboardLayout(props) {
           <Box sx={{ flexGrow: 1 }} />
 
           <Stack direction="row" alignItems="center" spacing={{ xs: 0.5, sm: 1.5 }}>
+            {/* Appbar */}
           </Stack>
         </Toolbar>
       </AppBar>

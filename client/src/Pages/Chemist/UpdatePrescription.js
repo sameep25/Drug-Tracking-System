@@ -6,13 +6,21 @@ import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
 import { styled } from "@mui/system";
 import TextField from "@mui/material/TextField";
+import { Button, Typography} from "@mui/material";
 
 const TableBox = styled("div")({
-  marginLeft: "8vh",
+  marginLeft: "4vh",
   marginRight: "8vh",
-  marginTop: "8vh",
+
   padding: "8px",
-  border: "1px #919191 solid",
+  borderTop: "1px #919191 solid",
+});
+
+const HeaderBox = styled("Box")({
+  display: "flex",
+  color: "#5081bc",
+  marginLeft: "4vh",
+  marginRight: "12vh",
 });
 
 // temp data
@@ -72,6 +80,7 @@ const prescriptionId =
 const UpdatePrescription = () => {
   const [data, setData] = useState(prescriptionDataInfo);
 
+
   const handleQuantityChange = (i) => (e) => {
     let newArr = [...prescriptionDataInfo];
     newArr[i][e.target.name] = e.target.value; // replace e.target.value with whatever you want to change it to
@@ -81,6 +90,12 @@ const UpdatePrescription = () => {
 
   return (
     <div>
+      <HeaderBox>
+        <Typography variant="h4">Update Prescription</Typography>
+        <Button  sx={{ marginLeft: "auto" }}>
+          Update Prescription
+        </Button>
+      </HeaderBox>
       <TableBox>
         <Table size="small">
           <TableHead>
@@ -99,10 +114,12 @@ const UpdatePrescription = () => {
                 <TableCell>{data.quantity}</TableCell>
                 <TableCell>
                   <TextField
+                    variant="standard"
+                    size="small"
                     autoComplete="off"
                     name="quantity"
                     id="drugQuantity"
-                    autoFocus
+                    type="number"
                     onChange={handleQuantityChange(i)}
                   />
                 </TableCell>
