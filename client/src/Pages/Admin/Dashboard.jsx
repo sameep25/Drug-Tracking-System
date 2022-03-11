@@ -1,9 +1,10 @@
+import React from 'react'
 import { Box, Container, Grid, Typography } from '@mui/material'
 import DrugsShipped from 'Component/AdminDashboard/DrugsShipped'
 import PatientPrescribed from 'Component/AdminDashboard/PatientPrescribed'
 import TotalPrescriptionScanned from 'Component/AdminDashboard/TotalPrescriptionScanned'
 import DrugsDispensed from 'Component/AdminDashboard/DrugsDispensed'
-import React from 'react'
+import DrugTrackingChart from 'Component/DrugTrackingChart'
 
 const Dashboard = () => {
   return (
@@ -12,11 +13,12 @@ const Dashboard = () => {
         minHeight: '100%',
       }}
     >
-      <Typography sx={{
-        pb: 3
-      }} variant="h5">
-        Welcome
-      </Typography>
+      <Typography
+          sx={{pb:3}}
+          variant="h6"
+        >
+          Welcome
+        </Typography>
       <Container maxWidth={false}>
         <Grid
           container
@@ -57,6 +59,9 @@ const Dashboard = () => {
             xs={12}
           >
             <TotalPrescriptionScanned sx={{ height: '100%' }} />
+          </Grid>
+          <Grid item xs={12}>
+            <DrugTrackingChart />
           </Grid>
 
         </Grid>
