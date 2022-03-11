@@ -1,6 +1,7 @@
 import { AppBar, Toolbar, Typography } from '@mui/material'
 import React from 'react'
 import { Outlet } from 'react-router-dom'
+import {FaIndustry} from 'react-icons/fa'
 
 const Manufacture = () => {
   return (
@@ -15,7 +16,7 @@ const Manufacture = () => {
         }}
       >
         <Toolbar>
-          <img style={{ width: '48px' }} src='/img/NcbLogo.png' alt="Ncb" />
+          <FaIndustry size={"30"}/>
         </Toolbar>
       </AppBar>
       <Outlet />
