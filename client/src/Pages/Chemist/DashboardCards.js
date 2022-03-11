@@ -5,18 +5,15 @@ import TotalPrescriptionScanned from 'Component/AdminDashboard/TotalPrescription
 import DrugsDispensed from 'Component/AdminDashboard/DrugsDispensed'
 import React from 'react'
 
-const Dashboard = () => {
+const DashboardCards = () => {
   return (
     <Box
       sx={{
         minHeight: '100%',
+        marginTop:"4vh" ,
       }}
     >
-      <Typography sx={{
-        pb: 3
-      }} variant="h5">
-        Welcome
-      </Typography>
+      
       <Container maxWidth={false}>
         <Grid
           container
@@ -29,7 +26,7 @@ const Dashboard = () => {
             xl={3}
             xs={12}
           >
-            <DrugsShipped title={"Total Shipped"}/>
+            <DrugsShipped title={"Total Narcotic Drug"}/>
           </Grid>
           <Grid
             item
@@ -38,7 +35,7 @@ const Dashboard = () => {
             xl={3}
             xs={12}
           >
-            <DrugsDispensed title={"Total Dispansed"}/>
+            <DrugsDispensed title={"Total Drugs Dispensed"}/>
           </Grid>
           <Grid
             item
@@ -47,7 +44,7 @@ const Dashboard = () => {
             xl={3}
             xs={12}
           >
-            <PatientPrescribed title={"Patient Prescribed"}/>
+            <PatientPrescribed title={"Total Patients Prescribe"}/>
           </Grid>
           <Grid
             item
@@ -56,7 +53,7 @@ const Dashboard = () => {
             xl={3}
             xs={12}
           >
-            <TotalPrescriptionScanned sx={{ height: '100%' }} title={"Prescription Scanned"}/>
+            <TotalPrescriptionScanned sx={{ height: '100%' }} title={"Total Prescription Scanned"}/>
           </Grid>
 
         </Grid>
@@ -65,4 +62,4 @@ const Dashboard = () => {
   )
 }
 
-export default Dashboard
+export default DashboardCards

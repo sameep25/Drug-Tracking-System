@@ -27,7 +27,7 @@ const DrugsDispensed = (props) => (
             gutterBottom
             variant="h6"
           >
-            Total Dispensed
+            {props.title }
           </Typography>
           <Typography
             color="textPrimary"

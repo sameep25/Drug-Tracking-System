@@ -27,7 +27,7 @@ const PatientPrescribed = (props) => (
             gutterBottom
             variant="h6"
           >
-            Patient Prescribed
+            {props.title}
           </Typography>
           <Typography
             color="textPrimary"

@@ -27,7 +27,7 @@ const TotalPresciptionScanned = (props) => (
             gutterBottom
             variant="h6"
           >
-            Presciption Scanned
+            {props.title}
           </Typography>
           <Typography
             color="textPrimary"
