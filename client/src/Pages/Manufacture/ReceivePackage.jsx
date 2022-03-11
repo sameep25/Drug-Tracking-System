@@ -9,7 +9,7 @@ const ReceivePackage = () => {
     <ThemeProvider theme={theme}>
       <CssBaseline />
       <Container component="main" maxWidth="sm" sx={{ mb: 4 }}>
-        <Paper variant="outlined" sx={{ my: { xs: 3, md: 6 }, p: { xs: 2, md: 3 } }}>
+        <Paper variant="outlined" sx={{  p: { xs: 2, md: 3 } }}>
           <Typography variant="h6" gutterBottom>
             Receive drug Package
           </Typography>

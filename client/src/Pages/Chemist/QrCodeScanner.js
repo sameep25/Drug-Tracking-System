@@ -20,7 +20,7 @@ const QrCodeScanner = () => {
 
   return (
     <>
-      <Button variant="contained" onClick={handleClickOpen} sx={{ width: '90%', mx: '13px', mb: '13px' }}>
+      <Button variant="contained" onClick={handleClickOpen} sx={{ width: '90%', mx: '12px', mb: '13px' }}>
         Scan Qr-Code
       </Button>
       <Dialog open={open} onClose={handleClose}>

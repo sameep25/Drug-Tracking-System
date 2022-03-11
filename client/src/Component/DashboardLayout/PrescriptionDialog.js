@@ -23,8 +23,9 @@ export default function AlertDialog() {
       <Dialog
         open={open}
         onClose={handleClose}
+        maxWidth="md"
       >
-        <DialogContent>
+        <DialogContent  sx={{width:"max-content"}}>
           <Prescription />
         </DialogContent>
       </Dialog>

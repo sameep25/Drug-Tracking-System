@@ -7,7 +7,7 @@ import TableRow from "@mui/material/TableRow";
 import { styled } from "@mui/system";
 
 import PrescriptionDialog from "Component/DashboardLayout/PrescriptionDialog";
-import { Typography } from "@mui/material";
+import { Paper, Typography } from "@mui/material";
 
 const patientList = [
   {
@@ -49,37 +49,37 @@ const StyledDiv = styled("div")({
 const PrescriptionList = () => {
   return (
     <>
-      <Typography variant="h4" sx={{ color:"#5081bc" , }}>Prescription List</Typography>
-      <StyledDiv>
-        <TableBox>
-          <Table size="small">
-            <TableHead>
-              <TableRow>
-                <TableCell size="medium">S.no</TableCell>
-                <TableCell>Patient Name</TableCell>
-                <TableCell>Patient Id</TableCell>
-                <TableCell>Prescription Id</TableCell>
-                <TableCell>Date</TableCell>
-                <TableCell>Prescription</TableCell>
-              </TableRow>
-            </TableHead>
-            <TableBody>
-              {patientList.map((data, i) => (
+      <Typography variant="h4" sx={{ color: "#5081bc", }}>Prescription List</Typography>
+        <Paper sx={{mt:2, pb:2}}>
+          <TableBox>
+            <Table size="small">
+              <TableHead>
                 <TableRow>
-                  <TableCell>{i + 1}</TableCell>
-                  <TableCell>{data.patientName} </TableCell>
-                  <TableCell>{data.patientId}</TableCell>
-                  <TableCell>{data.prescriptionId}</TableCell>
-                  <TableCell>{data.date}</TableCell>
-                  <TableCell>
-                    <PrescriptionDialog />
-                  </TableCell>
+                  <TableCell size="medium">S.no</TableCell>
+                  <TableCell>Patient Name</TableCell>
+                  <TableCell>Patient Id</TableCell>
+                  <TableCell>Prescription Id</TableCell>
+                  <TableCell>Date</TableCell>
+                  <TableCell>Prescription</TableCell>
                 </TableRow>
-              ))}
-            </TableBody>
-          </Table>
-        </TableBox>
-      </StyledDiv>
+              </TableHead>
+              <TableBody>
+                {patientList.map((data, i) => (
+                  <TableRow>
+                    <TableCell>{i + 1}</TableCell>
+                    <TableCell>{data.patientName} </TableCell>
+                    <TableCell>{data.patientId}</TableCell>
+                    <TableCell>{data.prescriptionId}</TableCell>
+                    <TableCell>{data.date}</TableCell>
+                    <TableCell>
+                      <PrescriptionDialog />
+                    </TableCell>
+                  </TableRow>
+                ))}
+              </TableBody>
+            </Table>
+          </TableBox>
+        </Paper>
     </>
   );
 };

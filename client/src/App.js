@@ -21,6 +21,7 @@ import DoctorList from "Pages/Admin/DoctorList";
 import ChemistList from "Pages/Admin/ChemistList";
 import DrugHistory from "Pages/DrugHistory";
 import Verification from "Pages/Admin/Verification";
+import DispenseDrug from "Pages/Chemist/DispenseDrug";
 
 const App = () => {
   return (
@@ -37,9 +38,12 @@ const App = () => {
 
           <Route path="/chemist" element={<Chemist />}>
             <Route path="" element={<ChemistProfile />} />
+            <Route path="dispense-drug" element={<DispenseDrug />} />
             <Route path="scan-qrcode" element={<QrCodeScanner />} />
             <Route path="update-prescription" element={<UpdatePrescription />} />
             <Route path="prescription-list" element={<ChemistPrescriptionList />} />
+            <Route path="receive-package" element={<ReceivePackage />} />
+            <Route path="logout" element={()=><></>} />
           </Route>
 
           {/* // TODO: Alot of work pending */}

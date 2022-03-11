@@ -1,11 +1,10 @@
 import React from "react";
 import QRCode from "react-qr-code";
+import {Box} from '@mui/material'
 
 const QrCode = ({ prescriptionId }) => {
   return (
-    <div>
-      <QRCode size={200} value={prescriptionId} />
-    </div>
+      <QRCode size={"200"} value={prescriptionId} />
   );
 };
 

@@ -44,7 +44,6 @@ const PatientBox = styled("div")({
   padding: 8,
   marginTop: "0.5rem",
   marginLeft: "4vh",
-
   "& > *": {
     fontSize: "14px",
     color: "#515151",
@@ -85,8 +84,9 @@ const Prescription = () => {
   return (
     <>
       <Container
-        maxWidth={"md"}
+        maxWidth='md'
         sx={{
+          minWidth: '610px',
           border: "1px solid #919191",
           minHeight: "100vh",
           margin: "24px auto",
@@ -101,7 +101,7 @@ const Prescription = () => {
         </HeaderParent>
 
         <Grid container>
-          <Grid item xs={8}>
+          <Grid item xs={7}>
             <DoctorBox>
               <Typography style={{ color: "#5081bc" }}>
                 Doctor Details -
@@ -125,22 +125,25 @@ const Prescription = () => {
 
           <Grid
             item
-            xs={4}
+            xs={5}
             style={{
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
             }}
           >
-            <Box>
-              <QrCode prescriptionId={prescriptionId} />
-            </Box>
+            <QrCode prescriptionId={prescriptionId} />
           </Grid>
         </Grid>
         <TableHeader>
           <Typography>Drug-List</Typography>
         </TableHeader>
-        <PrescriptionTable />
+        <Box sx={{
+          paddingLeft: "6%",
+          paddingRight: "6%",
+        }}>
+          <PrescriptionTable />
+        </Box>
       </Container>
     </>
   );

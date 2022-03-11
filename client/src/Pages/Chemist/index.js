@@ -1,8 +1,10 @@
 import React from "react";
 import { Outlet } from "react-router-dom";
-import { CgProfile, CgUserList, CgNotes } from "react-icons/cg";
+import { CgProfile, CgUserList, CgLogOut } from "react-icons/cg";
 import Dashboard from "Component/DashboardLayout";
 import QrCodeScanner from "./QrCodeScanner";
+import { RiFolderReceivedLine } from 'react-icons/ri'
+
 
 const drawerItems = [
   {
@@ -18,6 +20,16 @@ const drawerItems = [
     icon: <CgUserList size={20} />,
     title: "Prescription List",
     path: "/chemist/prescription-list",
+  },
+  {
+    icon: <RiFolderReceivedLine size={20} />,
+    title: "Receive Package",
+    path: "/chemist/receive-package",
+  },
+  {
+    icon: <CgLogOut size={20} />,
+    title: "Logout",
+    path: "/chemist/logout",
   },
 ];
 

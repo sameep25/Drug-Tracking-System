@@ -14,8 +14,6 @@ const prescriptionDataTable = [
 ];
 
 const TableBox = styled("div")({
-  marginLeft: "8vh",
-  marginRight: "8vh",
   padding: "8px",
 });
 
