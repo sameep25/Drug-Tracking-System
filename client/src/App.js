@@ -20,6 +20,7 @@ import ChemistPrescriptionList from "Pages/Chemist/PrescriptionList";
 import DoctorList from "Pages/Admin/DoctorList";
 import ChemistList from "Pages/Admin/ChemistList";
 import DrugHistory from "Pages/DrugHistory";
+import Verification from "Pages/Admin/Verification";
 
 const App = () => {
   return (
@@ -51,6 +52,7 @@ const App = () => {
             <Route path="" element={<AdminDashboard />} />
             <Route path="doctors" element={<DoctorList />} />
             <Route path="chemists" element={<ChemistList />} />
+            <Route path="verification" element={<Verification />} />
           </Route>
 
           <Route path="prescription" element={<Prescription />} />

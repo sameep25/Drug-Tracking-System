@@ -3,6 +3,8 @@ import React from "react";
 import { Box, Button, Typography } from "@mui/material";
 import { styled } from "@mui/material";
 
+import DashboardCardsDoctor from "Pages/Doctor/DashboardCardsDoctor";
+
 const Header = styled("Box")({
   display: "flex",
   marginLeft: "4vh",
@@ -56,6 +58,13 @@ const Profile = () => {
           <Typography>Doctor Id - {doctor[0].id}</Typography>
         </Box>
       </ProfileBox>
+
+      <Box>
+        <DashboardCardsDoctor />
+      </Box>
+
+
+
     </>
   );
 };
