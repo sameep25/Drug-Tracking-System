@@ -1,24 +1,19 @@
-import React from 'react'
 import { Box, Container, Grid, Typography } from '@mui/material'
 import DrugsShipped from 'Component/AdminDashboard/DrugsShipped'
 import PatientPrescribed from 'Component/AdminDashboard/PatientPrescribed'
 import TotalPrescriptionScanned from 'Component/AdminDashboard/TotalPrescriptionScanned'
 import DrugsDispensed from 'Component/AdminDashboard/DrugsDispensed'
-import DrugTrackingChart from 'Component/DrugTrackingChart'
+import React from 'react'
 
-const Dashboard = () => {
+const DashboardCards = () => {
   return (
     <Box
       sx={{
         minHeight: '100%',
+        marginTop:"4vh" ,
       }}
     >
-      <Typography
-          sx={{pb:3}}
-          variant="h6"
-        >
-          Welcome
-        </Typography>
+      
       <Container maxWidth={false}>
         <Grid
           container
@@ -31,7 +26,7 @@ const Dashboard = () => {
             xl={3}
             xs={12}
           >
-            <DrugsShipped title={"Total Shipped"}/>
+            <DrugsShipped title={"Total Narcotic Drug"}/>
           </Grid>
           <Grid
             item
@@ -40,7 +35,7 @@ const Dashboard = () => {
             xl={3}
             xs={12}
           >
-            <DrugsDispensed title={"Total Dispansed"}/>
+            <DrugsDispensed title={"Total Drugs Dispensed"}/>
           </Grid>
           <Grid
             item
@@ -49,7 +44,7 @@ const Dashboard = () => {
             xl={3}
             xs={12}
           >
-            <PatientPrescribed title={"Patient Prescribed"}/>
+            <PatientPrescribed title={"Total Patients Prescribe"}/>
           </Grid>
           <Grid
             item
@@ -58,10 +53,7 @@ const Dashboard = () => {
             xl={3}
             xs={12}
           >
-            <TotalPrescriptionScanned sx={{ height: '100%' }} title={"Prescription Scanned"}/>
-          </Grid>
-          <Grid item xs={12}>
-            <DrugTrackingChart />
+            <TotalPrescriptionScanned sx={{ height: '100%' }} title={"Total Prescription Scanned"}/>
           </Grid>
 
         </Grid>
@@ -70,4 +62,4 @@ const Dashboard = () => {
   )
 }
 
-export default Dashboard
+export default DashboardCards

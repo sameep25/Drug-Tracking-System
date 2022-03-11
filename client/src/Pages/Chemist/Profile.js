@@ -4,6 +4,7 @@ import { Box, Button, Typography } from "@mui/material";
 import { styled } from "@mui/material";
 
 import QrCodeScanner from "Pages/Chemist/QrCodeScanner";
+import DashboardCards from "Pages/Chemist/DashboardCards";
 
 const Header = styled("Box")({
   display: "flex",
@@ -35,6 +36,7 @@ const imgUrl =
 const Profile = () => {
   return (
     <>
+    
       <Header>
         <Box>
           <Typography sx={{ color: "#919191" }}>Welcome</Typography>
@@ -63,6 +65,13 @@ const Profile = () => {
           <Typography>Chemist Id - {chemist[0].id}</Typography>
         </Box>
       </ProfileBox>
+
+      <Box>
+        <DashboardCards />
+      </Box>
+
+
+
     </>
   );
 };
