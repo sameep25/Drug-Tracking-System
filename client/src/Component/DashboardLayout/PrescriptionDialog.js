@@ -6,6 +6,8 @@ import DialogContent from "@mui/material/DialogContent";
 
 import Prescription from "Pages/Prescription";
 
+
+
 export default function AlertDialog() {
   const [open, setOpen] = React.useState(false);
 
@@ -24,7 +26,7 @@ export default function AlertDialog() {
         open={open}
         onClose={handleClose}
       >
-        <DialogContent>
+        <DialogContent >
           <Prescription />
         </DialogContent>
       </Dialog>

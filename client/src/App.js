@@ -20,12 +20,15 @@ import ChemistPrescriptionList from "Pages/Chemist/PrescriptionList";
 import DoctorList from "Pages/Admin/DoctorList";
 import ChemistList from "Pages/Admin/ChemistList";
 import Verification from "Pages/Admin/Verification";
+import SignInSide from "Pages/Login"
 
 const App = () => {
   return (
     <>
       <Router>
         <Routes>
+
+          <Route path="/login" element={<SignInSide />}/>
 
           <Route path="/doctor" element={<Doctor />}>
             <Route path="new-prescription" element={<NewPrescription />} />
