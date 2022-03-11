@@ -66,6 +66,9 @@ export default function NewPrescription() {
   }
 
   const updateFieldChanged = index => e => {
+
+
+
     let newArr = [...prescribeDrugInfo]; // copying the old datas array
     newArr[index][e.target.name] = e.target.value; // replace e.target.value with whatever you want to change it to
   
@@ -98,6 +101,8 @@ export default function NewPrescription() {
                 value={patientAadharCardNumber}
                 onChange={(e) => setPatientAadharCardNumber(e.target.value)}
                 autoFocus
+                type={"number"}
+                
               />
             </Grid>
           </Grid>

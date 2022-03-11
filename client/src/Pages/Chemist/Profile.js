@@ -31,7 +31,7 @@ const chemist = [
 ];
 
 const imgUrl =
-  "https://m.media-amazon.com/images/I/41hmyB0fe2L._UXNaN_FMjpg_QL85_.jpg";
+"https://www.fortischennai.com/frontend/docimage/M-dtr-1554189149.png";
 
 const Profile = () => {
   return (
