@@ -21,13 +21,19 @@ import DoctorList from "Pages/Admin/DoctorList";
 import ChemistList from "Pages/Admin/ChemistList";
 import DrugHistory from "Pages/DrugHistory";
 import Verification from "Pages/Admin/Verification";
+<<<<<<< HEAD
 import DispenseDrug from "Pages/Chemist/DispenseDrug";
+=======
+import SignInSide from "Pages/Login"
+>>>>>>> 4c6ac64da8988f6d3feb8ea6d994c6ebe8a98bd4
 
 const App = () => {
   return (
     <>
       <Router>
         <Routes>
+
+          <Route path="/login" element={<SignInSide />}/>
 
           <Route path="/doctor" element={<Doctor />}>
             <Route path="new-prescription" element={<NewPrescription />} />
