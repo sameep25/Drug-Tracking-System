@@ -1,6 +1,6 @@
 import React from "react";
 import Grid from "@mui/material/Grid";
-import { styled } from "@mui/material";
+import { Paper, styled } from "@mui/material";
 
 // pages
 import Profile from "Pages/Chemist/Profile";
@@ -18,12 +18,15 @@ const DashBoardChemist = () => {
   return (
     <>
       <DivStyle>
-        <Grid container spacing={2}>
-          <Grid item xs={12}>
-            <Profile />
+
+        <Paper sx={{ pb: 3 }}>
+          <Grid container spacing={2}>
+            <Grid item xs={12}>
+              <Profile />
+            </Grid>
+
           </Grid>
-          
-        </Grid>
+        </Paper>
       </DivStyle>
     </>
   );

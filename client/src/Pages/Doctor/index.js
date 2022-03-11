@@ -19,12 +19,6 @@ const drawerItems = [
     title: "Patient List",
     path: "/doctor/patient-list",
   },
-  {
-    icon: <CgUserList size={20}/>,
-    title: "Prescription",
-    path: "/doctor/prescription",
-  },
-
 ];
 
 const account = {

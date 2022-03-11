@@ -1,9 +1,8 @@
 import React from "react";
 
-import { Box, Button, Typography } from "@mui/material";
+import { Box, Button, Paper, Typography } from "@mui/material";
 import { styled } from "@mui/material";
 
-import QrCodeScanner from "Pages/Chemist/QrCodeScanner";
 import DashboardCards from "Pages/Chemist/DashboardCards";
 
 const Header = styled("Box")({
@@ -31,47 +30,45 @@ const chemist = [
 ];
 
 const imgUrl =
-"https://www.fortischennai.com/frontend/docimage/M-dtr-1554189149.png";
+  "https://www.fortischennai.com/frontend/docimage/M-dtr-1554189149.png";
 
 const Profile = () => {
   return (
     <>
-    
-      <Header>
+
+      <Paper sx={{ pb: 3 }}>
+
+        <Header>
+          <Box>
+            <Typography sx={{ color: "#919191" }}>Welcome</Typography>
+            <Typography sx={{ color: "#5081bc" }}>
+              Mr.{chemist[0].name}
+            </Typography>
+          </Box>
+          <Box sx={{ display: "flex", alignItems: "center", marginLeft: "auto" }}>
+
+            <Button sx={{ marginLeft: "auto" }}>LogOut</Button>
+          </Box>
+        </Header>
+
+        <ProfileBox>
+          <Box>
+            <img
+              style={{ width: "90px", borderRadius: "50%" }}
+              src={imgUrl}
+              alt="chemistdp"
+            />
+          </Box>
+          <Box>
+            <Typography>Mr. {chemist[0].name}</Typography>
+            <Typography>Contact - {chemist[0].contact}</Typography>
+            <Typography>Chemist Id - {chemist[0].id}</Typography>
+          </Box>
+        </ProfileBox>
         <Box>
-          <Typography sx={{ color: "#919191" }}>Welcome</Typography>
-          <Typography sx={{ color: "#5081bc" }}>
-            Mr.{chemist[0].name}
-          </Typography>
+          <DashboardCards />
         </Box>
-        <Box sx={{ display: "flex", alignItems: "center", marginLeft: "auto" }}>
-          <QrCodeScanner />
-
-          <Button sx={{ marginLeft: "auto" }}>LogOut</Button>
-        </Box>
-      </Header>
-
-      <ProfileBox>
-        <Box>
-          <img
-            style={{ width: "90px", borderRadius: "50%" }}
-            src={imgUrl}
-            alt="chemistdp"
-          />
-        </Box>
-        <Box>
-          <Typography>Mr. {chemist[0].name}</Typography>
-          <Typography>Contact - {chemist[0].contact}</Typography>
-          <Typography>Chemist Id - {chemist[0].id}</Typography>
-        </Box>
-      </ProfileBox>
-
-      <Box>
-        <DashboardCards />
-      </Box>
-
-
-
+      </Paper>
     </>
   );
 };

@@ -7,6 +7,8 @@ import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
 import CircularProgress from "@mui/material/CircularProgress";
+import { Paper } from "@mui/material";
+import { Navigate, useNavigate } from "react-router-dom";
 // import { END_POINT } from "utils/serverURL";
 // import axios from "axios";
 
@@ -50,9 +52,15 @@ export default function NewPrescription() {
     },
   ]);
 
+  const navigate = useNavigate();
+
   const handleSubmit = (e) => {
     e.preventDefault();
     setLoading(true);
+
+    setTimeout(() => {
+      navigate('/prescription')
+    }, 1000);
   };
 
   const addNewDrug = () => {
@@ -66,9 +74,6 @@ export default function NewPrescription() {
   }
 
   const updateFieldChanged = index => e => {
-
-
-
     let newArr = [...prescribeDrugInfo]; // copying the old datas array
     newArr[index][e.target.name] = e.target.value; // replace e.target.value with whatever you want to change it to
   
@@ -79,6 +84,8 @@ export default function NewPrescription() {
   return (
     <Container component="main" maxWidth="sm">
       <CssBaseline />
+      <Paper variant="elevation" sx={{p:4}}>
+        
       <Box
         sx={{
           display: "flex",
@@ -190,13 +197,15 @@ export default function NewPrescription() {
             sx={{ mt: 3, mb: 2 }}
           >
             {loading ? (
-              <CircularProgressWithLabel value={progress} />
+              // <CircularProgressWithLabel value={progress} />
+              "New Prescription"
             ) : (
               "New Prescription"
             )}
           </Button>
         </Box>
       </Box>
+      </Paper>
     </Container>
   );
 }

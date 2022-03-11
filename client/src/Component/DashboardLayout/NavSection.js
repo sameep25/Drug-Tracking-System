@@ -18,6 +18,7 @@ import {
   ListItemIcon,
   ListItemButton,
   Icon,
+  Button,
 } from "@mui/material";
 
 // ----------------------------------------------------------------------
@@ -64,7 +65,7 @@ NavItem.propTypes = {
 function NavItem({ item, active }) {
   const theme = useTheme();
   const isActiveRoot = active(item.path);
-  const { title, path, icon, info, children } = item;
+  const { title, path, icon, info, children, element } = item;
   const [open, setOpen] = useState(isActiveRoot);
 
   const handleOpen = () => {
@@ -85,6 +86,14 @@ function NavItem({ item, active }) {
     color: "text.primary",
     fontWeight: "fontWeightMedium",
   };
+
+  if (element) {
+    return (
+      <>
+        {element}
+      </>
+    )
+  }
 
   if (children) {
     return (

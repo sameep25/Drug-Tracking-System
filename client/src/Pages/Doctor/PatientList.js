@@ -156,26 +156,29 @@ export default function CollapsibleTable() {
         Patient List
       </Typography>
       <StyledDiv>
-        <TableContainer>
-          <Table aria-label="collapsible table" size="medium">
-            <TableHead>
-              <TableRow>
-                <TableCell>S.No</TableCell>
-                <TableCell>Name</TableCell>
-                <TableCell>Contact</TableCell>
-                <TableCell>Id</TableCell>
-                <TableCell>Age</TableCell>
-                <TableCell>Gender</TableCell>
-                <TableCell>Prescription</TableCell>
-              </TableRow>
-            </TableHead>
-            <TableBody>
-              {patientListData.map((patient, i) => {
-                return <Row patient={patient} index={i} key={i} />;
-              })}
-            </TableBody>
-          </Table>
-        </TableContainer>
+
+        <Paper variant="elevation" sx={{ p: 4 }}>
+          <TableContainer>
+            <Table aria-label="collapsible table" size="medium">
+              <TableHead>
+                <TableRow>
+                  <TableCell>S.No</TableCell>
+                  <TableCell>Name</TableCell>
+                  <TableCell>Contact</TableCell>
+                  <TableCell>Id</TableCell>
+                  <TableCell>Age</TableCell>
+                  <TableCell>Gender</TableCell>
+                  <TableCell>Prescription</TableCell>
+                </TableRow>
+              </TableHead>
+              <TableBody>
+                {patientListData.map((patient, i) => {
+                  return <Row patient={patient} index={i} key={i} />;
+                })}
+              </TableBody>
+            </Table>
+          </TableContainer>
+        </Paper>
       </StyledDiv>
     </>
   );
