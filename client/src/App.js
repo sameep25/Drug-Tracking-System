@@ -17,6 +17,8 @@ import Admin from "Pages/Admin"
 import AdminDashboard from "Pages/Admin/Dashboard"
 import ChemistProfile from "Pages/Chemist/Profile";
 import ChemistPrescriptionList from "Pages/Chemist/PrescriptionList";
+import DoctorList from "Pages/Admin/DoctorList";
+import ChemistList from "Pages/Admin/ChemistList";
 
 const App = () => {
   return (
@@ -46,6 +48,8 @@ const App = () => {
 
           <Route path="/admin" element={<Admin />} >
             <Route path="" element={<AdminDashboard />} />
+            <Route path="doctors" element={<DoctorList />} />
+            <Route path="chemists" element={<ChemistList />} />
           </Route>
 
           <Route path="prescription" element={<Prescription />} />
