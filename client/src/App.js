@@ -19,6 +19,7 @@ import ChemistProfile from "Pages/Chemist/Profile";
 import ChemistPrescriptionList from "Pages/Chemist/PrescriptionList";
 import DoctorList from "Pages/Admin/DoctorList";
 import ChemistList from "Pages/Admin/ChemistList";
+import DrugHistory from "Pages/DrugHistory";
 import Verification from "Pages/Admin/Verification";
 import SignInSide from "Pages/Login"
 
@@ -58,6 +59,7 @@ const App = () => {
           </Route>
 
           <Route path="prescription" element={<Prescription />} />
+          <Route path="drug-timeline" element={<DrugHistory />} />
         </Routes>
       </Router>
     </>

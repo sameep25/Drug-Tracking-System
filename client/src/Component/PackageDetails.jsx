@@ -17,6 +17,7 @@ const PackageDetails = () => {
             name="drugName"
             fullWidth
             variant="standard"
+            autoComplete='off'
           />
         </Grid>
         <Grid item xs={12} sm={6}>
@@ -28,6 +29,7 @@ const PackageDetails = () => {
             label="Potency (.mg)"
             fullWidth
             variant="standard"
+            autoComplete='off'
           />
         </Grid>
         <Grid item xs={12} sm={6}>
@@ -41,6 +43,7 @@ const PackageDetails = () => {
             label="quantity"
             fullWidth
             variant="standard"
+            autoComplete='off'
           />
         </Grid>
         <Grid item xs={12} sm={6}>
@@ -51,6 +54,7 @@ const PackageDetails = () => {
             label="Unit (e.g.. Tablets, Packages)"
             fullWidth
             variant="standard"
+            autoComplete='off'
           />
         </Grid>
         

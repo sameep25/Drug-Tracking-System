@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Button ,styled ,Box } from "@mui/material";
+import { Button, Box } from "@mui/material";
 import Dialog from "@mui/material/Dialog";
 import DialogContent from "@mui/material/DialogContent";
 
@@ -19,16 +19,18 @@ const QrCodeScanner = () => {
   };
 
   return (
-    <div>
-        <Button onClick={handleClickOpen}>Scan Qr-Code</Button>
-        <Dialog open={open} onClose={handleClose}>
-          <DialogContent>
-            <Box sx={{width:"400px" ,height:"400px"}}>
-              <Scanner />
-            </Box>
-          </DialogContent>
-        </Dialog>
-    </div>
+    <>
+      <Button variant="contained" onClick={handleClickOpen} sx={{ width: '90%', mx: '13px', mb: '13px' }}>
+        Scan Qr-Code
+      </Button>
+      <Dialog open={open} onClose={handleClose}>
+        <DialogContent>
+          <Box sx={{ width: "400px", height: "400px" }}>
+            <Scanner />
+          </Box>
+        </DialogContent>
+      </Dialog>
+    </>
   );
 };
 
