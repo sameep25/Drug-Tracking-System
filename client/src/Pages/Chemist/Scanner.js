@@ -4,22 +4,23 @@ import { useNavigate } from "react-router-dom";
 
 import { Box } from "@mui/material";
 
-const Scanner = () => {
+const Scanner = ({handleClose}) => {
+  let navigate = useNavigate();
   const toPrescriptionPage = () => {
-    navigate("/chemist/update-prescription");
+    navigate("/chemist/dispense-drug");
   };
 
   const [data, setData] = useState("");
 
-  let navigate = useNavigate();
   return (
     <>
       <Box style={{ maxWidth: "400px" }}>
         <QrReader
           onResult={(result, error) => {
             if (!!result) {
-              setData(result?.text);
-              toPrescriptionPage();
+              console.log("done");
+              navigate("/chemist/dispense-drug");
+              handleClose();
             }
 
             if (!!error) {
