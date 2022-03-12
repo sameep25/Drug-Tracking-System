@@ -11,7 +11,7 @@ const products = [
   },
 ];
 
-const addresses = ['Near Kapil Road, Bargi Nagar', 'Jabalpur', 'Madhya Pradesh', '99999', 'India'];
+const addresses = ['Near  Kapil road, Bargi Nagar', 'Jabalpur', 'Madhya Pradesh', '99999', 'India'];
 
 export default function Summary() {
   return (
